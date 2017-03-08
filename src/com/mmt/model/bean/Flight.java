@@ -1,9 +1,12 @@
 package com.mmt.model.bean;
 
-
-
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
 public class Flight {
 	private String flightCompanyName;
+	@Id
 	private String flightId;
 	private String flightSource;
 	private String flightDestination;
@@ -12,12 +15,8 @@ public class Flight {
 	private double flightTicketPrice;
 	private int availableSeats;
 	
-	
-	
-	
 	public Flight() {
-		super();
-		// TODO Auto-generated constructor stub
+	
 	}
 	public Flight(String flightCompanyName, String flightId, String flightSource, String flightDestination,
 			String flightDepartureTime, String flightArrivalTime, double flightTicketPrice, int availableSeats) {
