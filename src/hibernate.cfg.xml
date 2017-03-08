@@ -9,7 +9,7 @@
 
         <!-- Database connection settings -->
         <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-        <property name="connection.url">jdbc:oracle:thin:@localhost:1521</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
         <property name="connection.username">system</property>
         <property name="connection.password">sapient@123</property>
 
@@ -26,8 +26,11 @@
         <property name="hbm2ddl.auto">update</property>
 
         <mapping class="com.mmt.model.bean.Flight"/>
-
-
+		<mapping class="com.mmt.model.bean.User"/>
+		<mapping class="com.mmt.model.bean.Promotion"/>
+		<mapping class="com.mmt.model.bean.Admin"/>
+		<mapping class="com.mmt.model.bean.FlightBooking"/>
+		<mapping class="com.mmt.model.bean.Wallet"/>
     </session-factory>
 
 </hibernate-configuration>

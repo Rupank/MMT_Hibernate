@@ -1,6 +1,11 @@
 package com.mmt.model.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity (name="Mmt_user")
 public class User {
+	@Id
 	private String userId;
 	private String userName;
 	private long userPhoneNo;
@@ -9,8 +14,6 @@ public class User {
 	private String userPassword;
 
 	public User() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public User(String userId, String userName, long userPhoneNo, String userEmailId, String userAddress,

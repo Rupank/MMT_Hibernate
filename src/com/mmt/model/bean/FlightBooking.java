@@ -2,13 +2,19 @@ package com.mmt.model.bean;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+@Entity
 public class FlightBooking {
+	@Id
 	private String flightBookingId;
 	private String userId;
 	private String flightId;
 	private Date flightBookingDate;
-	private boolean flag;
-	public FlightBooking(String flightBookingId, String userId, String flightId, Date flightbookingDate , boolean flag) {
+	private String flag;
+	public FlightBooking(String flightBookingId, String userId, String flightId, Date flightbookingDate , String flag) {
 		super();
 		this.flightBookingId = flightBookingId;
 		this.userId = userId;
@@ -44,10 +50,10 @@ public class FlightBooking {
 	public void setFlightBookingDate(Date flightBookingDate) {
 		this.flightBookingDate = flightBookingDate;
 	}
-	public boolean isFlag() {
+	public String isFlag() {
 		return flag;
 	}
-	public void setFlag(boolean string) {
+	public void setFlag(String string) {
 		this.flag = string;
 	}
 	@Override

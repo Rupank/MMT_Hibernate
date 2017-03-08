@@ -1,5 +1,10 @@
 package com.mmt.model.bean;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Promotion {
+	@Id
 	private String promotionId;
 	private String promotionName;
 	private double promotionDiscount;

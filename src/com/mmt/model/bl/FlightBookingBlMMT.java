@@ -72,7 +72,7 @@ public class FlightBookingBlMMT {
 				FBD.setFlightId(fid);
 				FBD.setFlightBookingId(id);
 				FBD.setFlightBookingDate(date);
-				FBD.setFlag(true);
+				FBD.setFlag("true");
 				flightBookingDao.insertFlightBooking(FBD);
 				flightdao.updateFlight(fid, f);
 				return FBD;

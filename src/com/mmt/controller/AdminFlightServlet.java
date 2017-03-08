@@ -156,7 +156,7 @@ public class AdminFlightServlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			if(arrayListFlight.isEmpty()){
+			if(arrayListFlight==null){
 				msg="No Flights Exist ";
 				session.setAttribute("msg",msg);
 				RequestDispatcher dispatch = request.getRequestDispatcher("SuccessfulFlightInsertion.jsp");

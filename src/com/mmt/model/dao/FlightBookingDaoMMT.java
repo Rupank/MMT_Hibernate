@@ -8,7 +8,6 @@ import com.mmt.model.bean.FlightBooking;
 
 public interface FlightBookingDaoMMT {
 	
-	ArrayList<FlightBooking> displayFlightBooking1() throws ClassNotFoundException, SQLException;
 	
 	ArrayList<FlightBooking> searchFlightBooking(String flightBookingId) throws ClassNotFoundException, SQLException, IOException;
 	

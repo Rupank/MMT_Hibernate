@@ -35,7 +35,7 @@ public class SearchFlightBySnDServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if (arrayListFlight.isEmpty()) {
+		if (arrayListFlight==null) {
 			String message = "No Flights from  " + source + " to " + destination;
 			session.setAttribute("message", message);
 			response.sendRedirect("NoFlightFromStD.jsp");

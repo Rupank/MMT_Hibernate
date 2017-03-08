@@ -1,11 +1,13 @@
 package com.mmt.model.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Wallet {
 	public Wallet() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
-
+	@Id
 	private String userId;
 	private double walletBalance;
 	public Wallet(String userId, double walletBalance) {

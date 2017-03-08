@@ -1,7 +1,11 @@
 package com.mmt.model.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Admin {
-	
+	@Id
 	private String adminId;
 	private String adminName;
 	private long adminPhoneNo;
