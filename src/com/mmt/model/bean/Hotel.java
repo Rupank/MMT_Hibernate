@@ -3,7 +3,11 @@ package com.mmt.model.bean;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Hotel {
+	@Id
 	private String hotelId;
 	private String hotelName;
 	private String hotelLocation;

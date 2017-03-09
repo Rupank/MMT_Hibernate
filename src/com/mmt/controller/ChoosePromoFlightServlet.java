@@ -31,6 +31,7 @@ public class ChoosePromoFlightServlet extends HttpServlet {
 		ArrayList<Promotion> arrayListPromoFlight = null;
 		try {
 			arrayListPromoFlight = promoBl.displayPromotion("FLIGHT");
+			System.out.println("Promotion -------"+arrayListPromoFlight);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

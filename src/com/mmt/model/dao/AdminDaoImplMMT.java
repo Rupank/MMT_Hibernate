@@ -98,6 +98,7 @@ public class AdminDaoImplMMT implements AdminDao{
 				return null;
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			tx.rollback();
 			return null;
 		} finally {

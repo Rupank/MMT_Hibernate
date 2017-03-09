@@ -32,7 +32,7 @@ public class FlightBookingImpMMT implements FlightBookingDaoMMT {
 		cfg = new AnnotationConfiguration();
 		cfg.configure();
 		factory = cfg.buildSessionFactory();
-		tx = null;
+		
 	}
 
 	// display the details of flightbooking
@@ -174,10 +174,13 @@ public class FlightBookingImpMMT implements FlightBookingDaoMMT {
 		Session session = factory.openSession();
 		try {
 			tx = session.beginTransaction();
+			System.out.println(fb);
 			session.save(fb);
 			tx.commit();
 			return 1;
 		} catch (Exception e) {
+			System.out.println("Erros IS----------");
+			e.printStackTrace();
 			tx.rollback();
 			return 0;
 		} finally {

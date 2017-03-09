@@ -1,5 +1,7 @@
 package com.mmt.model.bean;
 
+
+
 public class HotelRoom {
 	private String hotelId;
 	private int hotelRoomNo;

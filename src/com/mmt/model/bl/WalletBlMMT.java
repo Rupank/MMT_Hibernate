@@ -33,7 +33,7 @@ public class WalletBlMMT {
 			throws SQLException, ClassNotFoundException, IOException {
 		Wallet w;
 		w = walletDao.displayWallet(userId);
-
+		System.out.println("Wallet is---------"+w);
 		w.setWalletBalance(w.getWalletBalance() + value);
 		walletDao.updateWallet(userId, w);
 		return true;

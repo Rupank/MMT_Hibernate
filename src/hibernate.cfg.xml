@@ -30,7 +30,10 @@
 		<mapping class="com.mmt.model.bean.Promotion"/>
 		<mapping class="com.mmt.model.bean.Admin"/>
 		<mapping class="com.mmt.model.bean.FlightBooking"/>
+		<mapping class="com.mmt.model.bean.Hotel"/>
 		<mapping class="com.mmt.model.bean.Wallet"/>
+		<mapping class="com.mmt.model.bean.HotelRoom"/>
+		<mapping class="com.mmt.model.bean.HotelBooking"/>
     </session-factory>
 
 </hibernate-configuration>

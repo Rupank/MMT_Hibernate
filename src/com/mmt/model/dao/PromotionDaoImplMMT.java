@@ -172,9 +172,13 @@ public class PromotionDaoImplMMT implements PromotionDaoMMT {
 		Session session = factory.openSession();
 		try {
 			tx = session.beginTransaction();
+			System.out.println("1sdas");
 			Query query = session.createQuery("from Promotion");
+			System.out.println("2sdas");
 			List<Promotion> pList = query.list();
-
+			System.out.println("3sdas");
+			System.out.println(pList);
+			
 			return (ArrayList<Promotion>) pList;
 
 		} catch (Exception e) {
@@ -253,14 +257,13 @@ public class PromotionDaoImplMMT implements PromotionDaoMMT {
 		Session session = factory.openSession();
 		try {
 			tx = session.beginTransaction();
-			ArrayList<Promotion> promotion =  (ArrayList<Promotion>) session.get(Promotion.class, promotionType);
-			if (promotion != null) {
-				// tx.commit(); Not Required but wont give any error if used
-				return promotion;
-			} else
-				return null;
-
+			Query query = session.createQuery("from Promotion where promotionType=?");
+			query.setString(0, promotionType);
+			List<Promotion> promoList=query.list();
+			return (ArrayList<Promotion>) promoList;
 		} catch (Exception e) {
+			//System.out.println("Error isjndsanms------------");
+			e.printStackTrace();
 			tx.rollback();
 			return null;
 		} finally {

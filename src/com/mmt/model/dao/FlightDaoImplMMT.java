@@ -289,10 +289,11 @@ public class FlightDaoImplMMT implements FlightDaoMMT {
 			query.setString(0, flightSource);
 			query.setString(1, flightDestination);
 			List<Flight> flightList = query.list();
-			System.out.println(flightList);
+			//System.out.println(flightList);
 			return (ArrayList<Flight>) flightList;
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			tx.rollback();
 			return null;
 		} finally {

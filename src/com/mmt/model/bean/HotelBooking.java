@@ -2,7 +2,11 @@ package com.mmt.model.bean;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class HotelBooking {
+	@Id
 	private String hotelBookingId;
 	private String hotelId;
 	private String userId;

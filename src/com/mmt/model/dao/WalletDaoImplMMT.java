@@ -56,14 +56,20 @@ public class WalletDaoImplMMT implements WalletDaoMMT {
 		Session session = factory.openSession();
 		try {
 			tx = session.beginTransaction();
-			Wallet wallet = (Wallet) session.get(Wallet.class, userId);
-			if (wallet != null) {
-				// tx.commit(); Not Required but wont give any error if used
-				return wallet;
-			} else
-				return null;
-
+			System.out.println("0");
+			Query query = session.createQuery("from Wallet where userId=?");
+			query.setString(0,userId);
+			System.out.println("1");
+			List<Wallet> wallet= query.list();
+			System.out.println(wallet);
+			Wallet w=wallet.get(0);
+			System.out.println(w);
+			System.out.println("2");
+				return w;
 		} catch (Exception e) {
+			System.out.println("Loop3");
+			e.printStackTrace();
+			System.out.println("Loop4");
 			tx.rollback();
 			return null;
 		} finally {
